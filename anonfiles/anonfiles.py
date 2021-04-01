@@ -4,10 +4,16 @@ import requests
 
 
 class AnonFiles:
+    """
+    AnonFiles.com file hosting
+    """
+
     API_URL = "https://api.anonfiles.com"
 
     def __init__(self, token: str = None) -> None:
         """
+        Create new client.
+
         token: user api token
         """
 
@@ -55,6 +61,14 @@ class AnonFiles:
 
         # success response
         return AnonSuccessResponse(r.json())
+
+
+class BayFiles(AnonFiles):
+    """
+    BayFiles.com file hosting.
+    """
+
+    API_URL = "https://api.bayfiles.com"
 
 
 class AnonSuccessResponse:

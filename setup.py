@@ -5,7 +5,7 @@ README = (pathlib.Path(__file__).parent / "README.md").read_text()
 
 setup(
     name="anonfiles-py",
-    version="0.1.0",
+    version="0.1.1",
     description="Simple AnonFiles.com API Wrapper",
     long_description=README,
     long_description_content_type="text/markdown",
