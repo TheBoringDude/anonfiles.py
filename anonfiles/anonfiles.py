@@ -1,5 +1,5 @@
 from __future__ import annotations
-from src.resp import ErrorResp, SuccessRespData
+from .resp import ErrorResp, SuccessRespData
 import requests
 
 

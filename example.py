@@ -1,4 +1,4 @@
-from src import AnonFiles
+from anonfiles import AnonFiles
 
 a = AnonFiles()
 
