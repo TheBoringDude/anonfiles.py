@@ -76,8 +76,14 @@ class AnonSuccessResponse:
         self.status = json.get("status")
         self.data = SuccessRespData(json.get("data"))
 
+    def __repr__(self) -> str:
+        return f"\nSuccessfully uploaded `{self.data.file.metadata.name}` => {self.data.file.url.short}"
+
 
 class AnonErrorResponse:
     def __init__(self, json: dict) -> None:
         self.status = json.get("status")
         self.error = ErrorResp(json.get("error"))
+
+    def __repr__(self) -> str:
+        return f"\nUpload Failed | {self.error.code} - {self.error.message}"
